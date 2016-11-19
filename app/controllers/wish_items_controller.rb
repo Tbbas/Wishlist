@@ -5,6 +5,9 @@ class WishItemsController < ApplicationController
       @wish_item = @wish_list.wish_items.create(wish_item_params)
       redirect_to @wish_list
   end
+  def show
+      @wish_item= @wish_list.wish_items.find(params[:id])
+  end
   def destroy
     @wish_item = @wish_list.wish_items.find(params[:id])
     if @wish_item.destroy

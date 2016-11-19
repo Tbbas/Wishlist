@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wish_item.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wish_item.description %>
+</p>
+<p><%=image_tag(@wish_item.image)%>
+</p>
+<p><%=@wish_item.price%></p>
+<p><%=@wish_item.url%></p>
+<%= link_to "Delete", wish_list_wish_item_path(@wish_list, @wish_item.id), method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to 'Back', wish_lists_path %>

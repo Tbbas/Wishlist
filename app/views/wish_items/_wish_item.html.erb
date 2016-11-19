@@ -3,4 +3,5 @@
 <p><%=wish_item.price %> </p>
 <p><%=wish_item.url %> </p>
 <p><%=wish_item.image %> </p>
+<td><%= link_to 'Show',wish_list_wish_item_path(@wish_list, wish_item.id)%></td>
 <%= link_to "Delete", wish_list_wish_item_path(@wish_list, wish_item.id), method: :delete, data: {confirm: "Are you sure?"} %>
