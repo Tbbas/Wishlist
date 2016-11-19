@@ -1,0 +1,6 @@
+<p><%=wish_item.name %> </p>
+<p><%=wish_item.description %> </p>
+<p><%=wish_item.price %> </p>
+<p><%=wish_item.url %> </p>
+<p><%=wish_item.image %> </p>
+<%= link_to "Delete", wish_list_wish_item_path(@wish_list, wish_item.id), method: :delete, data: {confirm: "Are you sure?"} %>

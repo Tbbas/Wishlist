@@ -1,0 +1,8 @@
+<%= form_for([@wish_list, @wish_list.wish_items.build]) do |f| %>
+  <%= f.text_field :name, placeholder: "New Item" %>
+  <%= f.text_field :description, placeholder: "Description" %>
+  <%= f.text_field :price, placeholder: "Price" %>
+  <%= f.text_field :url, placeholder: "url" %>
+  <%= f.text_field :image, placeholder: "image" %>
+  <%= f.submit %>
+  <% end %>

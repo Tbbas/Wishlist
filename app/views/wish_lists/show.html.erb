@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wish_list.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wish_list.description %>
+</p>
+<div id="wish_items_wrapper">
+    <%= render @wish_list.wish_items %>
+    <div id="form">
+      <%= render "wish_items/form" %>
+      </div>
+  </div>
+
+<%= link_to 'Edit', edit_wish_list_path(@wish_list) %> |
+<%= link_to 'Back', wish_lists_path %>
