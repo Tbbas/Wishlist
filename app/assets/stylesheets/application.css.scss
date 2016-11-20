@@ -16,6 +16,7 @@
 
  */
 
+ @import "font-awesome";
 
   $white_opaque: rgba(250, 250, 250, .3);
   $dark: #1F7972;
@@ -29,11 +30,10 @@
 
  body {
      height: 100%;
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
-  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+     background-image: url(backdrop2.jpg);
+ }
+ .back {
+   font-size: 48px;
  }
 
  .clearfix:before,
@@ -55,7 +55,8 @@
  .header {
    width: 100%;
    height: 15%;
-   background-image: url(header.jpg);
+   border-bottom: 1px solid;
+
  }
  .title {
    font-family: 'Mountains of Christmas', cursive;
@@ -81,6 +82,7 @@
  .wish_list_title {
      text-align: center;
      font-weight: 700;
+     font-family: 'Lora';
      font-size: 2.5rem;
      color: white;
      margin: 0;
@@ -107,7 +109,7 @@
      margin: 0 0 3em 0;
      text-align: center;
      font-size: 0.9em;
-     color: $dark;
+     color: white;
      font-weight: 100;
  }
 
@@ -122,17 +124,20 @@
  #wish_items_wrapper {
      .row {
          width: 100%;
+         height: 50px;
+         text-align: center;
+         display: inline-block;
          border-top: 1px solid rgba(250,250,250, .3);
          border-bottom: 1px solid rgba(250,250,250, .3);
          .complete {
              width: 20%;
              float: left;
+             height: 100%;
              text-align: center;
              border-right: 1px solid rgba(250,250,250, .3);
-             padding: 1em 0;
          }
          .wish_item {
-             width: 60%;
+             width: 100%;
              min-width: 60%;
              text-align: center;
              height: 100%;
@@ -143,6 +148,13 @@
                  color: $dark;
                  font-weight: 100;
              }
+         }
+         .wish_name {
+           text-align: center;
+           vertical-align: center;
+           height: 100%;
+           width: 60%;
+
          }
          .trash {
              width: 20%;
@@ -203,7 +215,14 @@
          color: white;
      }
  }
-
+ .icon-wrapper {
+   text-align: center;
+   display:inline;
+ }
+ .icon {
+   font-size: 44px;
+   color: white;
+}
  .forms {
      padding: 0 5%;
  }

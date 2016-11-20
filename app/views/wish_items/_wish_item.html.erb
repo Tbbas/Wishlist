@@ -1,11 +1,15 @@
 <div class="row clearfix">
-  <div class="complete">
-    Hi
-  </div>
-<div class="wish_item"><%=wish_item.name%></div>
-  <div class="trash">
+<!--  <div class="complete link">
+    <a href="<%=wish_item.url %>">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</div> -->
+<a href="<%=wish_item.url%>"><div class="wish_item">
+     <%=wish_item.name%></div></a>
+<!--  <div class="trash link">
 <%= link_to wish_list_wish_item_path(@wish_list, wish_item.id), method: :delete, data: {confirm: "Are you sure?"} do %>
-Trash
+<i class="fa fa-trash" aria-hidden="true"></i>
 <%end%>
 </div>
+-->
 </div>
