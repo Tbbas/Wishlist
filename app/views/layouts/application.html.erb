@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Wishlist</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+<link href="https://fonts.googleapis.com/css?family=Anton|Lora|Mountains+of+Christmas" rel="stylesheet">    <%= csrf_meta_tags %>
   </head>
-
+  <div class="header"><h1 class="title">WishList</h1><p class="beta">Beta</p></div>
   <body>
+    <div class="container">
     <%= yield %>
+  </div>
+
   </body>
 </html>

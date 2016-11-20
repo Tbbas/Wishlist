@@ -1,6 +1,7 @@
-<h1>Editing Wish List</h1>
-
+<h1 class="wish_list_title">Edit Wish List</h1>
+<div class="forms">
 <%= render 'form', wish_list: @wish_list %>
-
-<%= link_to 'Show', @wish_list %> |
-<%= link_to 'Back', wish_lists_path %>
+</div>
+<div class="links">
+<%= link_to 'Cancel', wish_lists_path %>
+</div>

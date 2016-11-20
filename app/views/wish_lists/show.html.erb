@@ -1,21 +1,27 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @wish_list.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @wish_list.description %>
-</p>
+<h2 class="wish_list_title"><%=@wish_list.name%></h2>
+<p class="wish_list_subtitle"><%=@wish_list.description%></p>
 
 <div id="wish_items_wrapper">
     <%= render @wish_list.wish_items %>
+    <div class="links">
+      <p><a data-open="formModal">Add item</a></p>
+
+<div id="formModal" class="reveal" data-reveal>
     <div id="form">
       <%= render "wish_items/form" %>
       </div>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+     <span aria-hidden="true">&times;</span>
+   </button>
+    </div>
+    </div>
   </div>
-
+  <%= link_to wish_lists_path, wish_lists_path %><i class="fa fa-arrow-left" aria-hidden="true"></i>  
+  <p><a data-open="edit">Edit List</a></p>
+  <div class="reveal" id="edit" data-reveal>
+    <h4>Edit <%=@wish_list.name%></h4>
 <%= link_to 'Edit', edit_wish_list_path(@wish_list) %> |
-<%= link_to 'Back', wish_lists_path %>
+<%=link_to 'Delete', wish_list_path(@wish_list), method: :delete, data: {confirm: "Are you sure?"} %>|
+<button class="close-button" data-close aria-label="Close modal" type="button">
+</div>
