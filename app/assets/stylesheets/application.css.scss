@@ -31,6 +31,7 @@
  body {
      height: 100%;
      background-image: url(backdrop2.jpg);
+
  }
  .back {
    font-size: 48px;
@@ -60,16 +61,22 @@
  }
  .header {
    width: 100%;
-   height: 15%;
-   border-bottom: 1px solid;
 
+ }
+ .menuColor {
+   color: white;
+ }
+
+ .menuColor2 {
+   color: black;
  }
  .title {
    font-family: 'Mountains of Christmas', cursive;
+   font-size: 48px;
  }
  .beta {
-   font-family: 'Anton', cursive;
-   font-size: 20px;
+   font-family: 'Anton', serif;
+   font-size: 15px;
    color: red;
 }
 
@@ -282,5 +289,5 @@
    margin-left: 66px;
    color: red;
  }
- 
+
  ::-webkit-input-placeholder { color: $dark; }
