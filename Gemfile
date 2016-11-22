@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.2'
 #foundation
 gem 'foundation-rails'
 
+gem 'devise'
+
 #font awesomee
 gem "font-awesome-rails"
 

@@ -3,11 +3,13 @@
 
 <div id="wish_items_wrapper">
     <%= render @wish_list.wish_items %>
+    <% if admin_signed_in? %>
     <div class="links">
       <p><a data-open="formModal">
         <i class="fa fa-plus icon" aria-hidden="true"></i>
       </a></p>
     </div>
+    <%end%>
   </div>
 
   <div id="formModal" class="reveal" data-reveal>
@@ -18,21 +20,21 @@
        <span aria-hidden="true">&times;</span>
      </button>
       </div>
-
   <div class="reveal" id="edit" data-reveal>
     <h4>Edit <%=@wish_list.name%></h4>
 <%= link_to 'Edit', edit_wish_list_path(@wish_list) %> |
 <%=link_to 'Delete', wish_list_path(@wish_list), method: :delete, data: {confirm: "Are you sure?"} %>|
 <button class="close-button" data-close aria-label="Close modal" type="button">
 </div>
-
   <div class="icon-wrapper">
     <div id="back">
   <%= link_to wish_lists_path do %>
   <i class="fa fa-arrow-left icon" aria-hidden="true"></i>
   <%end %>
 </div>
+<% if admin_signed_in? %>
   <p><a data-open="edit"><i class="fa fa-pencil icon" aria-hidden="true"></i>
 </a></p>
+<%end%>
 
 </div>

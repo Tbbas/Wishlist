@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  get 'users/new'
+  resources :users
+
   resources :wish_lists do
     resources :wish_items
     end

@@ -1,3 +1,4 @@
+
 <% @wish_lists.each do |wish_list| %>
 <div class="index_row clearfix">
   <h2 class="wish_list_title"><%= link_to wish_list.name, wish_list%></h2>
@@ -5,8 +6,9 @@
   <p class="wish_list_sub_title"><%=wish_list.description%></p>
   </div>
   <%end%>
+  <% if admin_signed_in? %>
   <div class="links">
     <%=link_to "New Wish List",new_wish_list_path %>
-
+<%end%>
   </div>
 </div>
